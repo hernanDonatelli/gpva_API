@@ -7,11 +7,23 @@ const options = {
 };
 
 let contenido = document.querySelector("#contenido");
+let circuito = document.querySelector("#circuito");
+let date = document.querySelector("#date");
 
 fetch("https://formula-18.p.rapidapi.com/raceResult?year=2022&race=13", options)
   .then((response) => response.json())
   .then((datos) => {
       console.log(datos);
+
+      //Extraigo el nombre del circuito, fecha del evento y la ronda actual de carreras totales
+      for(let item of datos){
+        // console.log(circuito.raceName);
+
+        circuito.innerHTML = `${item.Circuit.circuitName}`;
+        date.innerHTML = new Date(`${item.date}`).toLocaleDateString();
+        race_actual.innerHTML = `${item.round}`;
+      }
+
 
       //Extraigo el objeto Results del array original y lo convierto en "Array de Resultados"
       let resultados = datos.map(dato => dato.Results);
