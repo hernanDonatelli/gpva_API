@@ -3,14 +3,16 @@
   padding: 0;
   box-sizing: border-box; }
 
-.header {
+.header__resultado,
+.header__campeonato {
   width: 100%;
   height: 60vh;
   background-image: url(../img/fondo_resultados.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center; }
-  .header h1 {
+  .header__resultado h1,
+  .header__campeonato h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 4rem;
@@ -18,6 +20,13 @@
     font-style: italic;
     color: orange;
     margin-bottom: 0; }
+  .header__resultado h2,
+  .header__campeonato h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #c9c9c9;
+    font-family: "Oswald", sans-serif;
+    font-style: normal; }
 
 .cabecera__info #circuito {
   font-size: 2.5rem;
@@ -51,6 +60,75 @@
   .cabecera__fecha #race_totales {
     color: #c9c9c9; }
 
+.tabla_resultados h3,
+.tabla_resultados h4,
+.tabla_calendario h3,
+.tabla_calendario h4,
+.tabla_campeonato h3,
+.tabla_campeonato h4,
+.tabla_ultima_fecha h3,
+.tabla_ultima_fecha h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2rem;
+  display: inline-block;
+  border-left: 10px solid orange;
+  padding-left: .25rem; }
+
 tbody#contenido {
   font-family: "Roboto", sans-serif;
   font-weight: 300; }
+
+/**** Fin estilos Resultado ****/
+/**** Inicio estilos Campeonato ****/
+.header__campeonato {
+  background-image: url(../img/fondo_campeonato.jpg); }
+
+.torneo__img {
+  width: 50%; }
+  .torneo__img .img-fluid {
+    text-align: center;
+    display: block;
+    margin: 0 auto; }
+
+.torneo__info {
+  width: 50%;
+  padding: 3%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.tabla_calendario h3,
+.tabla_campeonato h3,
+.tabla_ultima_fecha h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #8b8b8b;
+  border-left-color: #8b8b8b; }
+
+.tabla_calendario .title_ultima_fecha #circuito,
+.tabla_campeonato .title_ultima_fecha #circuito,
+.tabla_ultima_fecha .title_ultima_fecha #circuito {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  font-family: "Oswald", sans-serif;
+  color: #212121;
+  text-transform: uppercase; }
+
+.tabla_calendario .title_ultima_fecha #date,
+.tabla_campeonato .title_ultima_fecha #date,
+.tabla_ultima_fecha .title_ultima_fecha #date {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 300; }
+
+#contenido_calendario a {
+  text-decoration: underline;
+  line-height: 1.2rem;
+  color: #8b8b8b; }
+  #contenido_calendario a:hover {
+    color: orange; }

@@ -1,0 +1,66 @@
+/**** Inicio estilos Campeonato ****/
+.header__campeonato{
+    background-image: url(../img/fondo_campeonato.jpg);
+}
+
+.torneo{
+    &__img{
+        width: 50%;
+
+        .img-fluid{
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__info{
+        width: 50%;
+        padding: 3%;
+        font-family: $parrafoFont;
+        font-weight: 400;
+    }
+}
+
+.tabla_calendario,
+.tabla_campeonato,
+.tabla_ultima_fecha{
+    h3{
+        font-family: $titleFont;
+        font-weight: 900;
+        font-size: 3.5rem;
+        color: $colorGrisOscuro;
+        border-left-color: $colorGrisOscuro;
+    }
+
+    .title_ultima_fecha{
+        #circuito{
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0;
+            margin-right: 1rem;
+            font-family: $subtitleFont;
+            color: $colorTitulos;
+            text-transform: uppercase;
+        }
+
+        #date{
+            font-family: $subtitleFont;
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+}
+
+#contenido_calendario{
+    a{
+        text-decoration: underline;
+        line-height: 1.2rem;
+        color: $colorGrisOscuro;
+
+        &:hover{
+            color: $colorDetalles;
+        }
+    }
+}

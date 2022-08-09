@@ -6,7 +6,8 @@ const options = {
   },
 };
 
-let contenido = document.querySelector("#contenido");
+let contenido_race = document.querySelector("#contenido_race");
+let contenido_qualy = document.querySelector("#contenido_qualy");
 let circuito = document.querySelector("#circuito");
 let date = document.querySelector("#date");
 
@@ -35,7 +36,7 @@ fetch("https://formula-18.p.rapidapi.com/raceResult?year=2022&race=13", options)
 
         for(let valor of arrayResultados){
 
-            contenido.innerHTML += `
+            contenido_race.innerHTML += `
               <tr>
                   <td>${valor.position}</td>
                   <td>${valor.Driver.givenName} ${valor.Driver.familyName}</td>
