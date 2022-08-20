@@ -1,0 +1,14 @@
+h1{
+    font-family: $parrafoFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+form{
+    font-family: $titleFont;
+}
+
+.form-control:focus{
+    border-color: #6c757d45;
+    box-shadow: 0 0 5px 0.15rem rgba(108, 117, 125, 0.1);
+}

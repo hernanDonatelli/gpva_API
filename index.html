@@ -13,46 +13,30 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Resultados</title>
+  <title>GPVA - Administración Estadisticas</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <section class="container-fluid header d-flex justify-content-center align-items-center">
-      <h1 class="mb-3">Resultados</h1>
+      <h1 class="my-3">Creación de Torneo</h1>
     </section>
 
-    <section class="container text-center my-2">
-      <div class="cabecera d-flex justify-content-between align-items-center">
-        <div class="cabecera__info">
-          <div class="d-flex flex-column align-items-start">
-            <span id="circuito"></span><span id="date"></span>
-          </div>
+    <section class="create container" id="create">
+      <form action="">
+        <div class="col-6 mx-auto mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre de Campeonato</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
         </div>
-
-        <div class="cabecera__fecha">
-          <p>Fecha</p>
-          <span id="race_actual"></span> / <span id="race_totales">21</span>
+        <div class="col-6 mx-auto mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Plataforma</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2">
         </div>
-      </div>
-
-      <div class="w-100 mx-auto mt-5">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Posicion</th>
-              <th scope="col">Piloto</th>
-              <th scope="col">Tiempo</th>
-              <th scope="col">Record</th>
-              <th scope="col">Vueltas</th>
-              <th scope="col">Puntos</th>
-            </tr>
-          </thead>
-          <tbody id="contenido">
-
-          </tbody>
-        </table>
-      </div>
+        <div class="col-6 mx-auto mb-3">
+          <label for="formGroupExampleInput3" class="form-label">Sistema de Puntaje</label>
+          <input type="text" class="form-control" id="formGroupExampleInput3">
+        </div>
+      </form>
     </section>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box; }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+form {
+  font-family: "Montserrat", sans-serif; }
+
+.form-control:focus {
+  border-color: #6c757d45;
+  box-shadow: 0 0 5px 0.15rem rgba(108, 117, 125, 0.1); }
+
 .header__resultado,
 .header__campeonato {
   width: 100%;
