@@ -25,18 +25,57 @@
     <section class="create container" id="create">
       <form action="">
         <div class="col-6 mx-auto mb-3">
-          <label for="formGroupExampleInput" class="form-label">Nombre de Campeonato</label>
-          <input type="text" class="form-control" id="formGroupExampleInput">
+          <label for="nombreCampeonato" class="form-label">Nombre de Campeonato</label>
+          <input type="text" class="form-control" id="nombreCampeonato">
         </div>
         <div class="col-6 mx-auto mb-3">
-          <label for="formGroupExampleInput2" class="form-label">Plataforma</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2">
+          <label for="plataforma" class="form-label">Plataforma</label>
+          <input type="text" class="form-control" id="plataforma">
         </div>
         <div class="col-6 mx-auto mb-3">
-          <label for="formGroupExampleInput3" class="form-label">Sistema de Puntaje</label>
-          <input type="text" class="form-control" id="formGroupExampleInput3">
+          <label for="puntaje" class="form-label">Sistema de Puntaje</label>
+          <input type="text" class="form-control" id="puntaje">
+        </div>
+        <div class="col-6 mx-auto mt-4 text-center">
+          <button class="btn btn-primary w-25" type="submit">Crear</button>
         </div>
       </form>
+    </section>
+
+    <section class="container torneosListado mt-5" id="torneosListado">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Torneo</th>
+            <th scope="col">Plataforma</th>
+            <th scope="col">Puntajes</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Turismo Carretera</td>
+            <td>Simulador TC V3</td>
+            <td>50, 48, 45, 43, 40, 48, 45, 43, 40, 48, 45, 43, 40, 48, 45, 43, 40, 48, 45, 43, 40, 48, 45, 43, 40, 48, 45, 43, 40</td>
+            <td>
+              <button type="button" class="btn btn-warning">Editar</button>
+              <button type="button" class="btn btn-danger">Borrar</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Formula 3</td>
+            <td>Assetto Corsa</td>
+            <td>25, 18, 15, 13, 10, 8, 6, 4, 3, 2, 1</td>
+            <td>
+              <button type="button" class="btn btn-warning">Editar</button>
+              <button type="button" class="btn btn-danger">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

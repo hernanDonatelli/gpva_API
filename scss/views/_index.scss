@@ -12,3 +12,22 @@ form{
     border-color: #6c757d45;
     box-shadow: 0 0 5px 0.15rem rgba(108, 117, 125, 0.1);
 }
+
+table{
+    td,
+    th{
+        vertical-align: middle;
+    }
+
+    td{
+        &:nth-child(2){
+            width: 20%;
+        }
+        &:nth-child(3){
+            width: 20%;
+        }
+        &:nth-child(5){
+            width: 20%;
+        }
+    }
+}
