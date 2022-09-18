@@ -1,6 +1,6 @@
-class Torneo{
-  constructor(torneo, simulator, racePoints, qualyPoints){
-    this.torneo = torneo;
+class Torneo {
+  constructor(nombre, simulator, racePoints, qualyPoints) {
+    this.nombre = nombre;
     this.simulator = simulator;
     this.racePoints = racePoints;
     this.qualyPoints = qualyPoints;
@@ -8,25 +8,47 @@ class Torneo{
   }
 }
 
-//Array de todos los torneos
 let arrayTorneos = [];
+let nombre;
+let simulator;
+let racePoints;
+let qualyPoints;
 
-function nuevoTorneo(){
-  const torneo = document.getElementById("name").value;
-  const simulator = document.getElementById("simulator").value;
-  const racePoints = document.getElementById("racePoints").value;
-  const qualyPoints = document.getElementById("qualyPoints").value;
+//Creacion de objetos Torneos
+const nuevoTorneo = () => {
+  nombre = document.getElementById("name").value;
+  simulator = document.getElementById("simulator").value;
+  racePoints = document.getElementById("racePoints").value;
+  qualyPoints = document.getElementById("qualyPoints").value;
 
-  return new Torneo(torneo, simulator, racePoints, qualyPoints);
+  return new Torneo(nombre, simulator, racePoints, qualyPoints);
 }
 
-const create = document.getElementById("create");
-create.addEventListener("submit", (e) => {
+//Tabla dinamica de torneos creados
+const form = document.getElementById("formTorneo");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
+  let newTorneo = nuevoTorneo();
+  arrayTorneos.push(newTorneo);
 
-  //Aca hay que pintar la tabla html
-  const torneo = nuevoTorneo();
-  arrayTorneos.push(torneo);
-})
+  let newRow = document.getElementById("newRow");
+  let fila = document.createElement("tr");
 
-console.log(arrayTorneos);
+  arrayTorneos.forEach(torneo => {
+    fila.innerHTML = `<th scope="row">1</th>
+                      <td>${torneo.nombre}</td>
+                      <td>${torneo.simulator}</td>
+                      <td>${torneo.racePoints}</td>
+                      <td>${torneo.qualyPoints}</td>
+                      <td>
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                      </td>`
+    newRow.append(fila);
+
+  });
+
+});
+
+
