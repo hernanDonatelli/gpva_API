@@ -18,12 +18,40 @@
 
 <body>
   <div class="container-fluid">
-    <section class="container-fluid header d-flex justify-content-center align-items-center">
-      <h1 class="my-3">Creación de Torneo</h1>
+
+    <!-- Formulario de creacion de Torneos -->
+    <section class="create container" id="uploadFiles">
+      <h1 class="my-3 text-center">Subir Archivo</h1>
+
+      <form id="formUpload">
+        <!-- Nombre de Torneo -->
+        <div class="col-6 mx-auto mb-3">
+          <label for="name" class="form-label">Torneo</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+
+        <!-- Fecha Numero -->
+        <div class="col-6 mx-auto mb-3">
+          <label for="numeroFecha" class="form-label">Fecha Nro</label>
+          <input type="text" class="form-control" id="numeroFecha" name="numeroFecha">
+        </div>
+
+        <!-- Subir Archivo -->
+        <div class="col-6 mx-auto mb-3">
+          <label for="inputFile" class="form-label">Archivo</label>
+          <input type="file" class="form-control" id="inputFile">
+        </div>
+
+        <div class="col-6 mx-auto mt-4 text-center">
+          <button id="cargarArchivo" class="btn btn-success w-25" type="submit">Cargar</button>
+        </div>
+      </form>
     </section>
 
     <!-- Formulario de creacion de Torneos -->
-    <section class="create container" id="create">
+    <section class="create container mt-5" id="create">
+      <h1 class="my-3 text-center">Creación de Torneo</h1>
+
       <form id="formTorneo">
         <div class="col-6 mx-auto mb-3">
           <label for="name" class="form-label">Nombre de Campeonato</label>
@@ -56,6 +84,7 @@
 
     <!-- Listado de Torneos creados -->
     <section class="container torneosListado mt-5" id="torneosList">
+      <h1 class="text-center my-3">Torneos Activos</h1>
       <table id="tableTournament" class="table">
         <thead>
           <tr>
@@ -76,7 +105,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-  <script src="./js/index.js"></script>
+  <!-- <script src="./js/index.js"></script> -->
+  <script src="./js/apiRest.js"></script>
 </body>
 
 </html>
